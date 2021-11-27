@@ -1,0 +1,62 @@
+@import "./class.scss";
+#output {
+    @media (min-width: 800px) {
+        width: 50%;
+        height: 80vh;
+    }
+    @media (max-width: 799px) {
+        width: 95%;
+    }
+    margin: auto;
+
+    #preview {
+        width: 95%;
+        height: 100%;
+        overflow: scroll;
+        background-color: azure;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        blockquote {
+            border-left: 3px solid #224b4b;
+            color: #224b4b;
+            padding-left: 5px;
+            margin-left: 25px;
+        }
+        pre {
+            background-color: white;
+            width: 90%;
+            border-radius: 15px;
+            margin: auto;
+            padding: 1rem;
+        }
+        h1 {
+            border-bottom: 2px solid #401519;
+            font-size: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            border-bottom: 1px solid #401519;
+        }
+        h3 {
+            font-size: 1rem;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+        td,
+        th {
+            border: 2px solid #401519;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+    &-header {
+        @extend %header;
+    }
+}
+
+img {
+    width: 100%;
+}

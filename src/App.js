@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { marked } from 'marked'
+import Editor from './Components/Editor'
+import Previewer from './Components/Previewer'
+import "./SCSS/main.scss";
+export default function App() {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <section id="main">
+            <section id="title">
+                <h1>MARKDOWN PREVIEWER</h1>
+                <h4>FCC frontend library project</h4>
+            </section>
+            <section id="app">
+                <Editor />
+                <Previewer />
+            </section>
+            <section id="author">coded by Minh Phan</section>
+        </section>
+    )
 }
-
-export default App;
